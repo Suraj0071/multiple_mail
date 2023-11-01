@@ -47,7 +47,7 @@ def main():
         # Set up Chrome options with the proxy server
         chrome_options = webdriver.ChromeOptions()
         # chrome_options = add_extension()
-        # chrome_options.add_argument(f'--proxy-server={proxy_server}')
+        chrome_options.add_argument(f'--proxy-server={proxy_server}')
 
         # Create the WebDriver instance with the Chrome options
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=chrome_options)
